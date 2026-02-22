@@ -1,5 +1,4 @@
 project:
-  name: payment-fraud-risk
   seed: 42
 
 paths:
@@ -30,15 +29,13 @@ features:
   one_hot_min_freq: 10
 
 model:
-  kind: xgboost
   params:
-    n_estimators: 600
+    n_estimators: 300
     max_depth: 6
     learning_rate: 0.05
     subsample: 0.9
     colsample_bytree: 0.9
     reg_lambda: 1.0
-    min_child_weight: 1
     objective: binary:logistic
     eval_metric: aucpr
 
@@ -46,5 +43,5 @@ decision:
   threshold: 0.5
 
 explain:
-  shap_max_samples: 2000
+  shap_max_samples: 500
   top_k_features: 10

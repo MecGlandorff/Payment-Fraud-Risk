@@ -1,9 +1,0 @@
-project:
-  seed: 7
-
-model:
-  params:
-    n_estimators: 200
-
-explain:
-  shap_max_samples: 500
