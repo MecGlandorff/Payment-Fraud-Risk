@@ -6,6 +6,8 @@ from typing import Any
 import pandas as pd
 import yaml
 
+class ConfigError(ValueError):
+    """Config is missing required keys or has invalid types"""
 
 def load_config(path: str | Path) -> dict[str, Any]:
     """Load YAML config from disk. Returns {} if file is empty."""
@@ -23,3 +25,4 @@ def load_config(path: str | Path) -> dict[str, Any]:
         raise ConfigError(f"YAML root must be a dict, got {type(cfg).__name__}")
 
     return cfg
+
