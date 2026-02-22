@@ -1,0 +1,8 @@
+payment-fraud-risk/
+  configs/
+    config.yaml
+  src/
+    data.py        # load + clean + split
+    features.py    # preprocessing 
+    train.py       # train + save 
+    infer.py       # load artifacts + predict + explain drivers (SHAp-analysis)
