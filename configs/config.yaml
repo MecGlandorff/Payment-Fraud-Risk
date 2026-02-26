@@ -30,12 +30,13 @@ features:
 
 model:
   params:
-    n_estimators: 300
-    max_depth: 6
-    learning_rate: 0.05
-    subsample: 0.9
-    colsample_bytree: 0.9
-    reg_lambda: 1.0
+    n_estimators: 2000
+    max_depth: 3
+    min_child_weight: 5
+    learning_rate: 0.03
+    subsample: 0.8
+    colsample_bytree: 0.8
+    reg_lambda: 2.0
     objective: binary:logistic
     eval_metric: aucpr
 
